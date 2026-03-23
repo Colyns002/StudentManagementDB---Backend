@@ -1,10 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization; // Required for [Authorize]
 using StudentManagementAPI.Data;
 using StudentManagementAPI.Models;
 
 namespace StudentManagementAPI.Controllers
 {
+    [Authorize] // This locks the entire controller for authenticated users only
     [Route("api/[controller]")]
     [ApiController]
     public class StudentsController : ControllerBase
@@ -39,7 +41,7 @@ namespace StudentManagementAPI.Controllers
         {
             if (id != student.StudentID)
             {
-                return BadRequest("ID mismatch"); // Status 400
+                return BadRequest("ID mismatch");
             }
 
             _context.Entry(student).State = EntityState.Modified;
@@ -52,12 +54,12 @@ namespace StudentManagementAPI.Controllers
             {
                 if (!_context.Students.Any(e => e.StudentID == id))
                 {
-                    return NotFound(); // Status 404
+                    return NotFound();
                 }
                 throw;
             }
 
-            return NoContent(); // Status 204
+            return NoContent();
         }
 
         // DELETE: api/students/5
@@ -67,14 +69,13 @@ namespace StudentManagementAPI.Controllers
             var student = await _context.Students.FindAsync(id);
             if (student == null)
             {
-                return NotFound(); // Status 404
+                return NotFound();
             }
 
             _context.Students.Remove(student);
             await _context.SaveChangesAsync();
 
-            return NoContent(); // Status 204
+            return NoContent();
         }
-
     }
 }

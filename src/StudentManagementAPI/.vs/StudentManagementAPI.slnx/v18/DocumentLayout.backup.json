@@ -7,60 +7,64 @@
       "RelativeMoniker": "D:0:0:{E1DD3E1B-9923-2955-DE98-718F4C64CD77}|StudentManagementAPI\\StudentManagementAPI.csproj|solutionrelative:studentmanagementapi\\controllers\\studentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Administrator\\OneDrive\\Documents\\Agilebz Attatchment\\StudentManagementSystem-Backend\\src\\StudentManagementAPI\\scripts\\add-efsqlserver.ps1||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:scripts\\add-efsqlserver.ps1||{3B902123-F8A7-4915-9F01-361F908088D0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E1DD3E1B-9923-2955-DE98-718F4C64CD77}|StudentManagementAPI\\StudentManagementAPI.csproj|c:\\users\\administrator\\onedrive\\documents\\agilebz attatchment\\studentmanagementsystem-backend\\src\\studentmanagementapi\\studentmanagementapi\\models\\enrollment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E1DD3E1B-9923-2955-DE98-718F4C64CD77}|StudentManagementAPI\\StudentManagementAPI.csproj|solutionrelative:studentmanagementapi\\models\\enrollment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E1DD3E1B-9923-2955-DE98-718F4C64CD77}|StudentManagementAPI\\StudentManagementAPI.csproj|c:\\users\\administrator\\onedrive\\documents\\agilebz attatchment\\studentmanagementsystem-backend\\src\\studentmanagementapi\\studentmanagementapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{E1DD3E1B-9923-2955-DE98-718F4C64CD77}|StudentManagementAPI\\StudentManagementAPI.csproj|solutionrelative:studentmanagementapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1DD3E1B-9923-2955-DE98-718F4C64CD77}|StudentManagementAPI\\StudentManagementAPI.csproj|c:\\users\\administrator\\onedrive\\documents\\agilebz attatchment\\studentmanagementsystem-backend\\src\\studentmanagementapi\\studentmanagementapi\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1DD3E1B-9923-2955-DE98-718F4C64CD77}|StudentManagementAPI\\StudentManagementAPI.csproj|solutionrelative:studentmanagementapi\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1DD3E1B-9923-2955-DE98-718F4C64CD77}|StudentManagementAPI\\StudentManagementAPI.csproj|c:\\users\\administrator\\onedrive\\documents\\agilebz attatchment\\studentmanagementsystem-backend\\src\\studentmanagementapi\\studentmanagementapi\\services\\itokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1DD3E1B-9923-2955-DE98-718F4C64CD77}|StudentManagementAPI\\StudentManagementAPI.csproj|solutionrelative:studentmanagementapi\\services\\itokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1DD3E1B-9923-2955-DE98-718F4C64CD77}|StudentManagementAPI\\StudentManagementAPI.csproj|c:\\users\\administrator\\onedrive\\documents\\agilebz attatchment\\studentmanagementsystem-backend\\src\\studentmanagementapi\\studentmanagementapi\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1DD3E1B-9923-2955-DE98-718F4C64CD77}|StudentManagementAPI\\StudentManagementAPI.csproj|solutionrelative:studentmanagementapi\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E1DD3E1B-9923-2955-DE98-718F4C64CD77}|StudentManagementAPI\\StudentManagementAPI.csproj|c:\\users\\administrator\\onedrive\\documents\\agilebz attatchment\\studentmanagementsystem-backend\\src\\studentmanagementapi\\studentmanagementapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E1DD3E1B-9923-2955-DE98-718F4C64CD77}|StudentManagementAPI\\StudentManagementAPI.csproj|solutionrelative:studentmanagementapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E1DD3E1B-9923-2955-DE98-718F4C64CD77}|StudentManagementAPI\\StudentManagementAPI.csproj|c:\\users\\administrator\\onedrive\\documents\\agilebz attatchment\\studentmanagementsystem-backend\\src\\studentmanagementapi\\studentmanagementapi\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E1DD3E1B-9923-2955-DE98-718F4C64CD77}|StudentManagementAPI\\StudentManagementAPI.csproj|solutionrelative:studentmanagementapi\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E1DD3E1B-9923-2955-DE98-718F4C64CD77}|StudentManagementAPI\\StudentManagementAPI.csproj|c:\\users\\administrator\\onedrive\\documents\\agilebz attatchment\\studentmanagementsystem-backend\\src\\studentmanagementapi\\studentmanagementapi\\studentmanagementapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{E1DD3E1B-9923-2955-DE98-718F4C64CD77}|StudentManagementAPI\\StudentManagementAPI.csproj|solutionrelative:studentmanagementapi\\studentmanagementapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E1DD3E1B-9923-2955-DE98-718F4C64CD77}|StudentManagementAPI\\StudentManagementAPI.csproj|c:\\users\\administrator\\onedrive\\documents\\agilebz attatchment\\studentmanagementsystem-backend\\src\\studentmanagementapi\\studentmanagementapi\\models\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E1DD3E1B-9923-2955-DE98-718F4C64CD77}|StudentManagementAPI\\StudentManagementAPI.csproj|solutionrelative:studentmanagementapi\\models\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E1DD3E1B-9923-2955-DE98-718F4C64CD77}|StudentManagementAPI\\StudentManagementAPI.csproj|c:\\users\\administrator\\onedrive\\documents\\agilebz attatchment\\studentmanagementsystem-backend\\src\\studentmanagementapi\\studentmanagementapi\\dtos\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1DD3E1B-9923-2955-DE98-718F4C64CD77}|StudentManagementAPI\\StudentManagementAPI.csproj|solutionrelative:studentmanagementapi\\dtos\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E1DD3E1B-9923-2955-DE98-718F4C64CD77}|StudentManagementAPI\\StudentManagementAPI.csproj|c:\\users\\administrator\\onedrive\\documents\\agilebz attatchment\\studentmanagementsystem-backend\\src\\studentmanagementapi\\studentmanagementapi\\models\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E1DD3E1B-9923-2955-DE98-718F4C64CD77}|StudentManagementAPI\\StudentManagementAPI.csproj|solutionrelative:studentmanagementapi\\models\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E1DD3E1B-9923-2955-DE98-718F4C64CD77}|StudentManagementAPI\\StudentManagementAPI.csproj|c:\\users\\administrator\\onedrive\\documents\\agilebz attatchment\\studentmanagementsystem-backend\\src\\studentmanagementapi\\studentmanagementapi\\migrations\\20260322155608_identitysetup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1DD3E1B-9923-2955-DE98-718F4C64CD77}|StudentManagementAPI\\StudentManagementAPI.csproj|solutionrelative:studentmanagementapi\\migrations\\20260322155608_identitysetup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E1DD3E1B-9923-2955-DE98-718F4C64CD77}|StudentManagementAPI\\StudentManagementAPI.csproj|c:\\users\\administrator\\onedrive\\documents\\agilebz attatchment\\studentmanagementsystem-backend\\src\\studentmanagementapi\\studentmanagementapi\\controllers\\departmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E1DD3E1B-9923-2955-DE98-718F4C64CD77}|StudentManagementAPI\\StudentManagementAPI.csproj|solutionrelative:studentmanagementapi\\controllers\\departmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E1DD3E1B-9923-2955-DE98-718F4C64CD77}|StudentManagementAPI\\StudentManagementAPI.csproj|c:\\users\\administrator\\onedrive\\documents\\agilebz attatchment\\studentmanagementsystem-backend\\src\\studentmanagementapi\\studentmanagementapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{E1DD3E1B-9923-2955-DE98-718F4C64CD77}|StudentManagementAPI\\StudentManagementAPI.csproj|solutionrelative:studentmanagementapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E1DD3E1B-9923-2955-DE98-718F4C64CD77}|StudentManagementAPI\\StudentManagementAPI.csproj|c:\\users\\administrator\\onedrive\\documents\\agilebz attatchment\\studentmanagementsystem-backend\\src\\studentmanagementapi\\studentmanagementapi\\studentmanagementapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{E1DD3E1B-9923-2955-DE98-718F4C64CD77}|StudentManagementAPI\\StudentManagementAPI.csproj|solutionrelative:studentmanagementapi\\studentmanagementapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{E1DD3E1B-9923-2955-DE98-718F4C64CD77}|StudentManagementAPI\\StudentManagementAPI.csproj|c:\\users\\administrator\\onedrive\\documents\\agilebz attatchment\\studentmanagementsystem-backend\\src\\studentmanagementapi\\studentmanagementapi\\services\\emailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1DD3E1B-9923-2955-DE98-718F4C64CD77}|StudentManagementAPI\\StudentManagementAPI.csproj|solutionrelative:studentmanagementapi\\services\\emailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E1DD3E1B-9923-2955-DE98-718F4C64CD77}|StudentManagementAPI\\StudentManagementAPI.csproj|c:\\users\\administrator\\onedrive\\documents\\agilebz attatchment\\studentmanagementsystem-backend\\src\\studentmanagementapi\\studentmanagementapi\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E1DD3E1B-9923-2955-DE98-718F4C64CD77}|StudentManagementAPI\\StudentManagementAPI.csproj|solutionrelative:studentmanagementapi\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E1DD3E1B-9923-2955-DE98-718F4C64CD77}|StudentManagementAPI\\StudentManagementAPI.csproj|c:\\users\\administrator\\onedrive\\documents\\agilebz attatchment\\studentmanagementsystem-backend\\src\\studentmanagementapi\\studentmanagementapi\\controllers\\coursescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E1DD3E1B-9923-2955-DE98-718F4C64CD77}|StudentManagementAPI\\StudentManagementAPI.csproj|solutionrelative:studentmanagementapi\\controllers\\coursescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Administrator\\OneDrive\\Documents\\Agilebz Attatchment\\StudentManagementSystem-Backend\\src\\StudentManagementAPI\\StudentManagementAPI\\Migrations\\20260322145741_AddIdentityTables.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:StudentManagementAPI\\Migrations\\20260322145741_AddIdentityTables.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E1DD3E1B-9923-2955-DE98-718F4C64CD77}|StudentManagementAPI\\StudentManagementAPI.csproj|c:\\users\\administrator\\onedrive\\documents\\agilebz attatchment\\studentmanagementsystem-backend\\src\\studentmanagementapi\\studentmanagementapi\\studentmanagementapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
-      "RelativeMoniker": "D:0:0:{E1DD3E1B-9923-2955-DE98-718F4C64CD77}|StudentManagementAPI\\StudentManagementAPI.csproj|solutionrelative:studentmanagementapi\\studentmanagementapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+      "AbsoluteMoniker": "D:0:0:{E1DD3E1B-9923-2955-DE98-718F4C64CD77}|StudentManagementAPI\\StudentManagementAPI.csproj|c:\\users\\administrator\\onedrive\\documents\\agilebz attatchment\\studentmanagementsystem-backend\\src\\studentmanagementapi\\studentmanagementapi\\dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1DD3E1B-9923-2955-DE98-718F4C64CD77}|StudentManagementAPI\\StudentManagementAPI.csproj|solutionrelative:studentmanagementapi\\dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E1DD3E1B-9923-2955-DE98-718F4C64CD77}|StudentManagementAPI\\StudentManagementAPI.csproj|c:\\users\\administrator\\onedrive\\documents\\agilebz attatchment\\studentmanagementsystem-backend\\src\\studentmanagementapi\\studentmanagementapi\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{E1DD3E1B-9923-2955-DE98-718F4C64CD77}|StudentManagementAPI\\StudentManagementAPI.csproj|solutionrelative:studentmanagementapi\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{E1DD3E1B-9923-2955-DE98-718F4C64CD77}|StudentManagementAPI\\StudentManagementAPI.csproj|c:\\users\\administrator\\onedrive\\documents\\agilebz attatchment\\studentmanagementsystem-backend\\src\\studentmanagementapi\\studentmanagementapi\\studentmanagementapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{E1DD3E1B-9923-2955-DE98-718F4C64CD77}|StudentManagementAPI\\StudentManagementAPI.csproj|solutionrelative:studentmanagementapi\\studentmanagementapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1DD3E1B-9923-2955-DE98-718F4C64CD77}|StudentManagementAPI\\StudentManagementAPI.csproj|c:\\users\\administrator\\onedrive\\documents\\agilebz attatchment\\studentmanagementsystem-backend\\src\\studentmanagementapi\\studentmanagementapi\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1DD3E1B-9923-2955-DE98-718F4C64CD77}|StudentManagementAPI\\StudentManagementAPI.csproj|solutionrelative:studentmanagementapi\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1DD3E1B-9923-2955-DE98-718F4C64CD77}|StudentManagementAPI\\StudentManagementAPI.csproj|c:\\users\\administrator\\onedrive\\documents\\agilebz attatchment\\studentmanagementsystem-backend\\src\\studentmanagementapi\\studentmanagementapi\\models\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1DD3E1B-9923-2955-DE98-718F4C64CD77}|StudentManagementAPI\\StudentManagementAPI.csproj|solutionrelative:studentmanagementapi\\models\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -70,8 +74,83 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 6,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Course.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\OneDrive\\Documents\\Agilebz Attatchment\\StudentManagementSystem-Backend\\src\\StudentManagementAPI\\StudentManagementAPI\\Models\\Course.cs",
+              "RelativeDocumentMoniker": "StudentManagementAPI\\Models\\Course.cs",
+              "ToolTip": "C:\\Users\\Administrator\\OneDrive\\Documents\\Agilebz Attatchment\\StudentManagementSystem-Backend\\src\\StudentManagementAPI\\StudentManagementAPI\\Models\\Course.cs",
+              "RelativeToolTip": "StudentManagementAPI\\Models\\Course.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T08:11:19.371Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ITokenService.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\OneDrive\\Documents\\Agilebz Attatchment\\StudentManagementSystem-Backend\\src\\StudentManagementAPI\\StudentManagementAPI\\Services\\ITokenService.cs",
+              "RelativeDocumentMoniker": "StudentManagementAPI\\Services\\ITokenService.cs",
+              "ToolTip": "C:\\Users\\Administrator\\OneDrive\\Documents\\Agilebz Attatchment\\StudentManagementSystem-Backend\\src\\StudentManagementAPI\\StudentManagementAPI\\Services\\ITokenService.cs",
+              "RelativeToolTip": "StudentManagementAPI\\Services\\ITokenService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-22T16:56:11.661Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Administrator\\OneDrive\\Documents\\Agilebz Attatchment\\StudentManagementSystem-Backend\\src\\StudentManagementAPI\\StudentManagementAPI\\appsettings.json",
+              "RelativeDocumentMoniker": "StudentManagementAPI\\appsettings.json",
+              "ToolTip": "C:\\Users\\Administrator\\OneDrive\\Documents\\Agilebz Attatchment\\StudentManagementSystem-Backend\\src\\StudentManagementAPI\\StudentManagementAPI\\appsettings.json",
+              "RelativeToolTip": "StudentManagementAPI\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-03-22T16:53:18.473Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "RegisterDto.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\OneDrive\\Documents\\Agilebz Attatchment\\StudentManagementSystem-Backend\\src\\StudentManagementAPI\\StudentManagementAPI\\DTOs\\RegisterDto.cs",
+              "RelativeDocumentMoniker": "StudentManagementAPI\\DTOs\\RegisterDto.cs",
+              "ToolTip": "C:\\Users\\Administrator\\OneDrive\\Documents\\Agilebz Attatchment\\StudentManagementSystem-Backend\\src\\StudentManagementAPI\\StudentManagementAPI\\DTOs\\RegisterDto.cs",
+              "RelativeToolTip": "StudentManagementAPI\\DTOs\\RegisterDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-22T14:24:29.767Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\OneDrive\\Documents\\Agilebz Attatchment\\StudentManagementSystem-Backend\\src\\StudentManagementAPI\\StudentManagementAPI\\Program.cs",
+              "RelativeDocumentMoniker": "StudentManagementAPI\\Program.cs",
+              "ToolTip": "C:\\Users\\Administrator\\OneDrive\\Documents\\Agilebz Attatchment\\StudentManagementSystem-Backend\\src\\StudentManagementAPI\\StudentManagementAPI\\Program.cs",
+              "RelativeToolTip": "StudentManagementAPI\\Program.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAcwDcAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-22T14:20:32.109Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\OneDrive\\Documents\\Agilebz Attatchment\\StudentManagementSystem-Backend\\src\\StudentManagementAPI\\StudentManagementAPI\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "StudentManagementAPI\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\Administrator\\OneDrive\\Documents\\Agilebz Attatchment\\StudentManagementSystem-Backend\\src\\StudentManagementAPI\\StudentManagementAPI\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "StudentManagementAPI\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-22T14:33:31.546Z"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -80,7 +159,7 @@
               "RelativeDocumentMoniker": "StudentManagementAPI\\Controllers\\StudentsController.cs",
               "ToolTip": "C:\\Users\\Administrator\\OneDrive\\Documents\\Agilebz Attatchment\\StudentManagementSystem-Backend\\src\\StudentManagementAPI\\StudentManagementAPI\\Controllers\\StudentsController.cs*",
               "RelativeToolTip": "StudentManagementAPI\\Controllers\\StudentsController.cs*",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAIwEoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-16T08:04:32.465Z",
               "EditorCaption": ""
@@ -88,170 +167,112 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Enrollment.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\OneDrive\\Documents\\Agilebz Attatchment\\StudentManagementSystem-Backend\\src\\StudentManagementAPI\\StudentManagementAPI\\Models\\Enrollment.cs",
-              "RelativeDocumentMoniker": "StudentManagementAPI\\Models\\Enrollment.cs",
-              "ToolTip": "C:\\Users\\Administrator\\OneDrive\\Documents\\Agilebz Attatchment\\StudentManagementSystem-Backend\\src\\StudentManagementAPI\\StudentManagementAPI\\Models\\Enrollment.cs",
-              "RelativeToolTip": "StudentManagementAPI\\Models\\Enrollment.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAANAAAAAAAAAA==",
+              "Title": "TokenService.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\OneDrive\\Documents\\Agilebz Attatchment\\StudentManagementSystem-Backend\\src\\StudentManagementAPI\\StudentManagementAPI\\Services\\TokenService.cs",
+              "RelativeDocumentMoniker": "StudentManagementAPI\\Services\\TokenService.cs",
+              "ToolTip": "C:\\Users\\Administrator\\OneDrive\\Documents\\Agilebz Attatchment\\StudentManagementSystem-Backend\\src\\StudentManagementAPI\\StudentManagementAPI\\Services\\TokenService.cs",
+              "RelativeToolTip": "StudentManagementAPI\\Services\\TokenService.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAtwCcAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-16T08:44:46.489Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Administrator\\OneDrive\\Documents\\Agilebz Attatchment\\StudentManagementSystem-Backend\\src\\StudentManagementAPI\\StudentManagementAPI\\appsettings.json",
-              "RelativeDocumentMoniker": "StudentManagementAPI\\appsettings.json",
-              "ToolTip": "C:\\Users\\Administrator\\OneDrive\\Documents\\Agilebz Attatchment\\StudentManagementSystem-Backend\\src\\StudentManagementAPI\\StudentManagementAPI\\appsettings.json",
-              "RelativeToolTip": "StudentManagementAPI\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAACTAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-03-16T07:25:48.283Z"
+              "WhenOpened": "2026-03-22T16:56:45.649Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\OneDrive\\Documents\\Agilebz Attatchment\\StudentManagementSystem-Backend\\src\\StudentManagementAPI\\StudentManagementAPI\\Program.cs",
-              "RelativeDocumentMoniker": "StudentManagementAPI\\Program.cs",
-              "ToolTip": "C:\\Users\\Administrator\\OneDrive\\Documents\\Agilebz Attatchment\\StudentManagementSystem-Backend\\src\\StudentManagementAPI\\StudentManagementAPI\\Program.cs",
-              "RelativeToolTip": "StudentManagementAPI\\Program.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAcAAAACAAAAAAAAAA==",
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\OneDrive\\Documents\\Agilebz Attatchment\\StudentManagementSystem-Backend\\src\\StudentManagementAPI\\StudentManagementAPI\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "StudentManagementAPI\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\Administrator\\OneDrive\\Documents\\Agilebz Attatchment\\StudentManagementSystem-Backend\\src\\StudentManagementAPI\\StudentManagementAPI\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "StudentManagementAPI\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-16T07:06:34.477Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Student.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\OneDrive\\Documents\\Agilebz Attatchment\\StudentManagementSystem-Backend\\src\\StudentManagementAPI\\StudentManagementAPI\\Models\\Student.cs",
-              "RelativeDocumentMoniker": "StudentManagementAPI\\Models\\Student.cs",
-              "ToolTip": "C:\\Users\\Administrator\\OneDrive\\Documents\\Agilebz Attatchment\\StudentManagementSystem-Backend\\src\\StudentManagementAPI\\StudentManagementAPI\\Models\\Student.cs",
-              "RelativeToolTip": "StudentManagementAPI\\Models\\Student.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-16T07:36:44.021Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Department.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\OneDrive\\Documents\\Agilebz Attatchment\\StudentManagementSystem-Backend\\src\\StudentManagementAPI\\StudentManagementAPI\\Models\\Department.cs",
-              "RelativeDocumentMoniker": "StudentManagementAPI\\Models\\Department.cs",
-              "ToolTip": "C:\\Users\\Administrator\\OneDrive\\Documents\\Agilebz Attatchment\\StudentManagementSystem-Backend\\src\\StudentManagementAPI\\StudentManagementAPI\\Models\\Department.cs",
-              "RelativeToolTip": "StudentManagementAPI\\Models\\Department.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-16T08:10:43.438Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Course.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\OneDrive\\Documents\\Agilebz Attatchment\\StudentManagementSystem-Backend\\src\\StudentManagementAPI\\StudentManagementAPI\\Models\\Course.cs",
-              "RelativeDocumentMoniker": "StudentManagementAPI\\Models\\Course.cs",
-              "ToolTip": "C:\\Users\\Administrator\\OneDrive\\Documents\\Agilebz Attatchment\\StudentManagementSystem-Backend\\src\\StudentManagementAPI\\StudentManagementAPI\\Models\\Course.cs",
-              "RelativeToolTip": "StudentManagementAPI\\Models\\Course.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-16T08:11:19.371Z"
+              "WhenOpened": "2026-03-22T14:32:04.492Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "DepartmentsController.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\OneDrive\\Documents\\Agilebz Attatchment\\StudentManagementSystem-Backend\\src\\StudentManagementAPI\\StudentManagementAPI\\Controllers\\DepartmentsController.cs",
-              "RelativeDocumentMoniker": "StudentManagementAPI\\Controllers\\DepartmentsController.cs",
-              "ToolTip": "C:\\Users\\Administrator\\OneDrive\\Documents\\Agilebz Attatchment\\StudentManagementSystem-Backend\\src\\StudentManagementAPI\\StudentManagementAPI\\Controllers\\DepartmentsController.cs",
-              "RelativeToolTip": "StudentManagementAPI\\Controllers\\DepartmentsController.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAIA5wBgAAAABAAAAAAAAAA==",
+              "Title": "20260322155608_IdentitySetup.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\OneDrive\\Documents\\Agilebz Attatchment\\StudentManagementSystem-Backend\\src\\StudentManagementAPI\\StudentManagementAPI\\Migrations\\20260322155608_IdentitySetup.cs",
+              "RelativeDocumentMoniker": "StudentManagementAPI\\Migrations\\20260322155608_IdentitySetup.cs",
+              "ToolTip": "C:\\Users\\Administrator\\OneDrive\\Documents\\Agilebz Attatchment\\StudentManagementSystem-Backend\\src\\StudentManagementAPI\\StudentManagementAPI\\Migrations\\20260322155608_IdentitySetup.cs",
+              "RelativeToolTip": "StudentManagementAPI\\Migrations\\20260322155608_IdentitySetup.cs",
+              "ViewState": "AgIAAG4AAAAAAAAAAAAUwHQAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-16T08:16:49.288Z"
+              "WhenOpened": "2026-03-22T15:56:08.722Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "C:\\Users\\Administrator\\OneDrive\\Documents\\Agilebz Attatchment\\StudentManagementSystem-Backend\\src\\StudentManagementAPI\\StudentManagementAPI\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "StudentManagementAPI\\Properties\\launchSettings.json",
-              "ToolTip": "C:\\Users\\Administrator\\OneDrive\\Documents\\Agilebz Attatchment\\StudentManagementSystem-Backend\\src\\StudentManagementAPI\\StudentManagementAPI\\Properties\\launchSettings.json",
-              "RelativeToolTip": "StudentManagementAPI\\Properties\\launchSettings.json",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAiwAkAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-03-16T07:05:55.244Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "StudentManagementAPI.csproj",
-              "DocumentMoniker": "C:\\Users\\Administrator\\OneDrive\\Documents\\Agilebz Attatchment\\StudentManagementSystem-Backend\\src\\StudentManagementAPI\\StudentManagementAPI\\StudentManagementAPI.csproj",
-              "RelativeDocumentMoniker": "StudentManagementAPI\\StudentManagementAPI.csproj",
-              "ToolTip": "C:\\Users\\Administrator\\OneDrive\\Documents\\Agilebz Attatchment\\StudentManagementSystem-Backend\\src\\StudentManagementAPI\\StudentManagementAPI\\StudentManagementAPI.csproj",
-              "RelativeToolTip": "StudentManagementAPI\\StudentManagementAPI.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABRAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-03-16T07:33:32.219Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\OneDrive\\Documents\\Agilebz Attatchment\\StudentManagementSystem-Backend\\src\\StudentManagementAPI\\StudentManagementAPI\\Data\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "StudentManagementAPI\\Data\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\Administrator\\OneDrive\\Documents\\Agilebz Attatchment\\StudentManagementSystem-Backend\\src\\StudentManagementAPI\\StudentManagementAPI\\Data\\ApplicationDbContext.cs",
-              "RelativeToolTip": "StudentManagementAPI\\Data\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-16T07:52:41.736Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "add-efsqlserver.ps1",
-              "DocumentMoniker": "C:\\Users\\Administrator\\OneDrive\\Documents\\Agilebz Attatchment\\StudentManagementSystem-Backend\\src\\StudentManagementAPI\\scripts\\add-efsqlserver.ps1",
-              "RelativeDocumentMoniker": "scripts\\add-efsqlserver.ps1",
-              "ToolTip": "C:\\Users\\Administrator\\OneDrive\\Documents\\Agilebz Attatchment\\StudentManagementSystem-Backend\\src\\StudentManagementAPI\\scripts\\add-efsqlserver.ps1",
-              "RelativeToolTip": "scripts\\add-efsqlserver.ps1",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-03-16T08:18:57.074Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "CoursesController.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\OneDrive\\Documents\\Agilebz Attatchment\\StudentManagementSystem-Backend\\src\\StudentManagementAPI\\StudentManagementAPI\\Controllers\\CoursesController.cs",
-              "RelativeDocumentMoniker": "StudentManagementAPI\\Controllers\\CoursesController.cs",
-              "ToolTip": "C:\\Users\\Administrator\\OneDrive\\Documents\\Agilebz Attatchment\\StudentManagementSystem-Backend\\src\\StudentManagementAPI\\StudentManagementAPI\\Controllers\\CoursesController.cs",
-              "RelativeToolTip": "StudentManagementAPI\\Controllers\\CoursesController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-16T08:14:27.963Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 6,
               "Title": "StudentManagementAPI.http",
               "DocumentMoniker": "C:\\Users\\Administrator\\OneDrive\\Documents\\Agilebz Attatchment\\StudentManagementSystem-Backend\\src\\StudentManagementAPI\\StudentManagementAPI\\StudentManagementAPI.http",
               "RelativeDocumentMoniker": "StudentManagementAPI\\StudentManagementAPI.http",
               "ToolTip": "C:\\Users\\Administrator\\OneDrive\\Documents\\Agilebz Attatchment\\StudentManagementSystem-Backend\\src\\StudentManagementAPI\\StudentManagementAPI\\StudentManagementAPI.http",
               "RelativeToolTip": "StudentManagementAPI\\StudentManagementAPI.http",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
               "WhenOpened": "2026-03-16T07:06:43.937Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "appsettings.Development.json",
-              "DocumentMoniker": "C:\\Users\\Administrator\\OneDrive\\Documents\\Agilebz Attatchment\\StudentManagementSystem-Backend\\src\\StudentManagementAPI\\StudentManagementAPI\\appsettings.Development.json",
-              "RelativeDocumentMoniker": "StudentManagementAPI\\appsettings.Development.json",
-              "ToolTip": "C:\\Users\\Administrator\\OneDrive\\Documents\\Agilebz Attatchment\\StudentManagementSystem-Backend\\src\\StudentManagementAPI\\StudentManagementAPI\\appsettings.Development.json",
-              "RelativeToolTip": "StudentManagementAPI\\appsettings.Development.json",
+              "DocumentIndex": 11,
+              "Title": "20260322145741_AddIdentityTables.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\OneDrive\\Documents\\Agilebz Attatchment\\StudentManagementSystem-Backend\\src\\StudentManagementAPI\\StudentManagementAPI\\Migrations\\20260322145741_AddIdentityTables.cs",
+              "RelativeDocumentMoniker": "StudentManagementAPI\\Migrations\\20260322145741_AddIdentityTables.cs",
+              "ToolTip": "C:\\Users\\Administrator\\OneDrive\\Documents\\Agilebz Attatchment\\StudentManagementSystem-Backend\\src\\StudentManagementAPI\\StudentManagementAPI\\Migrations\\20260322145741_AddIdentityTables.cs",
+              "RelativeToolTip": "StudentManagementAPI\\Migrations\\20260322145741_AddIdentityTables.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-03-16T07:06:27.032Z"
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-22T14:57:42.144Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "EmailSender.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\OneDrive\\Documents\\Agilebz Attatchment\\StudentManagementSystem-Backend\\src\\StudentManagementAPI\\StudentManagementAPI\\Services\\EmailSender.cs",
+              "RelativeDocumentMoniker": "StudentManagementAPI\\Services\\EmailSender.cs",
+              "ToolTip": "C:\\Users\\Administrator\\OneDrive\\Documents\\Agilebz Attatchment\\StudentManagementSystem-Backend\\src\\StudentManagementAPI\\StudentManagementAPI\\Services\\EmailSender.cs",
+              "RelativeToolTip": "StudentManagementAPI\\Services\\EmailSender.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-22T15:26:08.624Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "LoginDto.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\OneDrive\\Documents\\Agilebz Attatchment\\StudentManagementSystem-Backend\\src\\StudentManagementAPI\\StudentManagementAPI\\DTOs\\LoginDto.cs",
+              "RelativeDocumentMoniker": "StudentManagementAPI\\DTOs\\LoginDto.cs",
+              "ToolTip": "C:\\Users\\Administrator\\OneDrive\\Documents\\Agilebz Attatchment\\StudentManagementSystem-Backend\\src\\StudentManagementAPI\\StudentManagementAPI\\DTOs\\LoginDto.cs",
+              "RelativeToolTip": "StudentManagementAPI\\DTOs\\LoginDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-22T14:25:21.554Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "StudentManagementAPI.csproj",
+              "DocumentMoniker": "C:\\Users\\Administrator\\OneDrive\\Documents\\Agilebz Attatchment\\StudentManagementSystem-Backend\\src\\StudentManagementAPI\\StudentManagementAPI\\StudentManagementAPI.csproj",
+              "RelativeDocumentMoniker": "StudentManagementAPI\\StudentManagementAPI.csproj",
+              "ToolTip": "C:\\Users\\Administrator\\OneDrive\\Documents\\Agilebz Attatchment\\StudentManagementSystem-Backend\\src\\StudentManagementAPI\\StudentManagementAPI\\StudentManagementAPI.csproj",
+              "RelativeToolTip": "StudentManagementAPI\\StudentManagementAPI.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-03-22T14:23:18.676Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ApplicationUser.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\OneDrive\\Documents\\Agilebz Attatchment\\StudentManagementSystem-Backend\\src\\StudentManagementAPI\\StudentManagementAPI\\Models\\ApplicationUser.cs",
+              "RelativeDocumentMoniker": "StudentManagementAPI\\Models\\ApplicationUser.cs",
+              "ToolTip": "C:\\Users\\Administrator\\OneDrive\\Documents\\Agilebz Attatchment\\StudentManagementSystem-Backend\\src\\StudentManagementAPI\\StudentManagementAPI\\Models\\ApplicationUser.cs",
+              "RelativeToolTip": "StudentManagementAPI\\Models\\ApplicationUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-22T14:19:35.723Z"
             }
           ]
         }
