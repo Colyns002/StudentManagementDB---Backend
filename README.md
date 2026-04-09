@@ -10,11 +10,11 @@
 
 #### **Admin Dashboard**
 Global oversight of system metrics, student enrollment, and job statistics.
-![Admin Dashboard](./screenshots/admin_dashboard.png)
+![Admin Dashboard](./screenshots/admin dashboard.png)
 
 #### **Employer Console**
 Streamlined hub for posting vacancies, managing internal course catalogs, and linking upskilling paths to roles.
-![Employer Dashboard](./screenshots/employer_dashboard.png)
+![Employer Dashboard](./screenshots/employer dashboard.png)
 
 ---
 
