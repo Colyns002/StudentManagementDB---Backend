@@ -1,44 +1,46 @@
-# Student Management API - Backend
+### **Core Features**
+-   **🔐 Zero-Trust Security**: Implemented with ASP.NET Core Identity & JWT Bearer authentication.
+-   **📈 Management Dashboards**: Dynamic, role-based interfaces for Admins, Employers, and Students.
+-   **🎓 Career-Linked Education**: A many-to-many relationship system linking courses to job qualifications and vice versa.
+-   **⚡ Modern SPA Frontend**: Single-page architecture with Mystic Jade themes and glassmorphism.
 
-### **Project Overview**
-This is a secure RESTful API built with **ASP.NET Core 10.0** to manage students, departments, and courses. It implements a **Zero Trust** security model using **ASP.NET Core Identity** and **JWT (JSON Web Tokens)**.
+---
+
+### **Dashboards & Interface**
+
+#### **Admin Dashboard**
+Global oversight of system metrics, student enrollment, and job statistics.
+![Admin Dashboard](./screenshots/admin_dashboard.png)
+
+#### **Employer Console**
+Streamlined hub for posting vacancies, managing internal course catalogs, and linking upskilling paths to roles.
+![Employer Dashboard](./screenshots/employer_dashboard.png)
 
 ---
 
 ### **Setup & Installation**
 
-**1. Database Configuration**
-Open `appsettings.json` and verify the `DefaultConnection`. 
-* Current setting: `Server=.` (Local SQL Instance).
+**1. Backend Initialization**
+*   Open `appsettings.json` and verify `DefaultConnection`.
+*   Run `Update-Database` in Package Manager Console to apply the **Many-to-Many Linking** migrations.
 
-**2. Apply Migrations**
-Open the **Package Manager Console** and run:
-`Update-Database`
-*This creates the schema and inserts the seed data automatically.*
-
-**3. Running the Application**
-* Press `F5` to launch Swagger UI.
-* **Note:** You must Register and Login to receive a JWT token before accessing protected endpoints.
+**2. Frontend Launch**
+*   Ensure the backend is running (`http://localhost:5178`).
+*   Open `Frontend/index.html` in any modern browser.
 
 ---
 
-### **API Endpoints Summary**
-
-| Category | Endpoint | Method | Auth | Description |
+### **API Architecture**
+| Category | Endpoint | Method | Role | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| **Auth** | `/api/Account/register` | POST | No | Create a new user account. |
-| **Auth** | `/api/Account/login` | POST | No | Get your JWT Bearer Token. |
-| **Data** | `/api/Students` | GET | **Yes** | List all students. |
-| **Data** | `/api/Departments` | GET | No | List academic departments. |
+| **Auth** | `/api/Account/register` | POST | Public | Create accounts (Student/Employer/Admin). |
+| **Logic** | `/api/Jobs` | GET | Auth | Fetch jobs with recommended courses. |
+| **Logic** | `/api/Courses` | GET | Public | Fetch courses with career insights. |
+| **Admin** | `/api/Admin/stats` | GET | Admin | System-wide performance metrics. |
 
 ---
 
 ### **Technical Implementation**
-* **Stateless Auth:** Uses JWT to avoid server-side session overhead.
-* **Token Security:** Signed with a **512-bit HMAC-SHA512** key.
-* **Entity Mapping:** Implements One-to-Many relationships between Departments and Students.
-
----
-
-### **Swagger UI Preview**
-![Swagger UI Screenshot](./swagger-screenshot.png)
+*   **Entity Framework Core**: Powering the `JobPost <-> JobPostCourse <-> Course` relationship.
+*   **JWT Security**: Tokens include role claims for client-side routing and server-side authorization.
+*   **Responsive Styling**: CSS-native gradients and fluid layouts for a premium experience.
