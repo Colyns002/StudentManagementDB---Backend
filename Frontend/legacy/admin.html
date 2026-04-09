@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Portal | Mission Control</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .admin-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .stat-card h4 {
+            color: var(--text-secondary);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-card .value {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--text-primary);
+        }
+
+        .tab-nav {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 1rem;
+        }
+
+        .tab-link {
+            cursor: pointer;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            transition: all 0.2s;
+        }
+
+        .tab-link.active {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        th, td {
+            text-align: left;
+            padding: 1rem;
+            border-bottom: 1px solid var(--border-color);
+            font-size: 0.875rem;
+        }
+
+        th {
+            background: #f8fafc;
+            font-weight: 600;
+            color: var(--text-secondary);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Admin Control Center</h1>
+        <div id="userMenu">
+            <span id="adminEmail" class="text-sm" style="margin-right: 1rem; font-weight: 600;"></span>
+            <button class="btn btn-outline" onclick="logout()">Logout</button>
+        </div>
+    </header>
+
+    <div class="container fade-in">
+        <!-- Stats Overview -->
+        <div class="admin-grid" id="statsGrid">
+            <div class="stat-card">
+                <h4>Total Students</h4>
+                <div class="value" id="statStudents">...</div>
+            </div>
+            <div class="stat-card">
+                <h4>Job Postings</h4>
+                <div class="value" id="statJobs">...</div>
+            </div>
+            <div class="stat-card">
+                <h4>Total Applications</h4>
+                <div class="value" id="statApplications">...</div>
+            </div>
+            <div class="stat-card">
+                <h4>Departments</h4>
+                <div class="value" id="statDepartments">...</div>
+            </div>
+        </div>
+
+        <!-- Dashboard Tabs -->
+        <div class="tab-nav">
+            <div class="tab-link active" onclick="switchTab('students')">All Students</div>
+            <div class="tab-link" onclick="switchTab('academics')">Academic Registry</div>
+            <div class="tab-link" onclick="switchTab('applications')">Global Applications</div>
+        </div>
+
+        <!-- Tab Content -->
+        <div id="tabContent">
+            <div id="studentsView">
+                <table id="studentTable">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Department ID</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="studentList"></tbody>
+                </table>
+            </div>
+            <div id="academicsView" style="display: none;">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+                    <div>
+                        <h3>Departments</h3>
+                        <table id="deptTable">
+                            <thead><tr><th>Name</th><th>Location</th></tr></thead>
+                            <tbody id="deptList"></tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <h3>Courses</h3>
+                        <table id="courseTable">
+                            <thead><tr><th>Title</th><th>Credits</th></tr></thead>
+                            <tbody id="courseList"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div id="applicationsView" style="display: none;">
+                <table id="appList">
+                    <thead>
+                        <tr>
+                            <th>App ID</th>
+                            <th>Student ID</th>
+                            <th>Job ID</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="globalAppList"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const apiBase = 'http://localhost:5178/api';
+
+        function checkAuth() {
+            const token = localStorage.getItem('token');
+            if (!token) { window.location.href = 'login.html'; return; }
+            document.getElementById('adminEmail').textContent = localStorage.getItem('email');
+        }
+
+        async function loadStats() {
+            const token = localStorage.getItem('token');
+            try {
+                const res = await fetch(`${apiBase}/Admin/stats`, {
+                    headers: { 'Authorization': `Bearer ${token}` }
+                });
+                const stats = await res.json();
+                document.getElementById('statStudents').textContent = stats.totalStudents;
+                document.getElementById('statJobs').textContent = stats.totalJobs;
+                document.getElementById('statApplications').textContent = stats.totalApplications;
+                document.getElementById('statDepartments').textContent = stats.totalDepartments;
+            } catch (e) { console.error("Stats load failed"); }
+        }
+
+        async function loadStudents() {
+            const token = localStorage.getItem('token');
+            const list = document.getElementById('studentList');
+            const res = await fetch(`${apiBase}/Students`, { headers: { 'Authorization': `Bearer ${token}` } });
+            const data = await res.json();
+            list.innerHTML = data.map(s => `
+                <tr>
+                    <td>${s.firstName} ${s.lastName}</td>
+                    <td>${s.email}</td>
+                    <td>${s.deptID}</td>
+                    <td><button class="btn btn-outline" style="padding: 0.25rem 0.5rem; font-size: 0.75rem;">Manage</button></td>
+                </tr>
+            `).join('');
+        }
+
+        async function loadAcademics() {
+            const token = localStorage.getItem('token');
+            const deptList = document.getElementById('deptList');
+            const courseList = document.getElementById('courseList');
+
+            const [dRes, cRes] = await Promise.all([
+                fetch(`${apiBase}/Departments`, { headers: { 'Authorization': `Bearer ${token}` } }),
+                fetch(`${apiBase}/Courses`, { headers: { 'Authorization': `Bearer ${token}` } })
+            ]);
+
+            const depts = await dRes.json();
+            const courses = await cRes.json();
+
+            deptList.innerHTML = depts.map(d => `<tr><td>${d.name}</td><td>${d.location}</td></tr>`).join('');
+            courseList.innerHTML = courses.map(c => `<tr><td>${c.title}</td><td>${c.credits}</td></tr>`).join('');
+        }
+
+        async function loadGlobalApplications() {
+            const token = localStorage.getItem('token');
+            const list = document.getElementById('globalAppList');
+            const res = await fetch(`${apiBase}/Jobs/applications`, { headers: { 'Authorization': `Bearer ${token}` } });
+            const data = await res.json();
+            list.innerHTML = data.map(a => `
+                <tr>
+                    <td>#${a.id}</td>
+                    <td>${a.studentId}</td>
+                    <td>${a.jobPostId}</td>
+                    <td><span style="color: var(--primary-color); font-weight: 600;">${a.status}</span></td>
+                </tr>
+            `).join('');
+        }
+
+        function switchTab(tab) {
+            document.querySelectorAll('.tab-link').forEach(l => l.classList.remove('active'));
+            event.target.classList.add('active');
+
+            document.getElementById('studentsView').style.display = tab === 'students' ? 'block' : 'none';
+            document.getElementById('academicsView').style.display = tab === 'academics' ? 'block' : 'none';
+            document.getElementById('applicationsView').style.display = tab === 'applications' ? 'block' : 'none';
+
+            if(tab === 'students') loadStudents();
+            if(tab === 'academics') loadAcademics();
+            if(tab === 'applications') loadGlobalApplications();
+        }
+
+        function logout() {
+            localStorage.clear();
+            window.location.href = 'login.html';
+        }
+
+        checkAuth();
+        loadStats();
+        loadStudents();
+    </script>
+</body>
+
+</html>

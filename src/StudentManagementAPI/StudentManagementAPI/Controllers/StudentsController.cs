@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authorization; // Required for [Authorize]
 using StudentManagementAPI.Data;
@@ -6,7 +6,6 @@ using StudentManagementAPI.Models;
 
 namespace StudentManagementAPI.Controllers
 {
-    [Authorize] // This locks the entire controller for authenticated users only
     [Route("api/[controller]")]
     [ApiController]
     public class StudentsController : ControllerBase
@@ -19,13 +18,27 @@ namespace StudentManagementAPI.Controllers
         }
 
         // GET: api/students
+        [Authorize(Roles = "Employer,Admin")] // Employers can see all to assist
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Student>>> GetStudents()
         {
             return await _context.Students.ToListAsync();
         }
 
+        // GET: api/students/my-profile
+        [Authorize(Roles = "Student")]
+        [HttpGet("my-profile")]
+        public async Task<ActionResult<Student>> GetMyProfile()
+        {
+            var userEmail = User.Identity?.Name; // In our JWT, Name is usually the email
+            var student = await _context.Students.FirstOrDefaultAsync(s => s.Email == userEmail);
+
+            if (student == null) return NotFound("Student profile not found.");
+            return student;
+        }
+
         // POST: api/students
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public async Task<ActionResult<Student>> PostStudent(Student student)
         {

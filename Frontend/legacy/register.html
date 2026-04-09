@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | Professional Portal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            padding: 0;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card fade-in" style="width: 100%; max-width: 400px;">
+        <h1 style="font-size: 1.5rem; text-align: center; color: var(--primary-color); margin-bottom: 0.5rem;">Job Portal</h1>
+        <h2 style="font-size: 1.125rem; margin-bottom: 2rem;">Create your account</h2>
+
+        <div id="msg" class="text-error text-sm text-center mb-4"></div>
+        <div id="successMsg" class="text-success text-sm text-center mb-4"></div>
+
+        <label for="email" class="text-sm font-semibold mb-1 block">Email address</label>
+        <input type="email" id="email" placeholder="name@company.com" required>
+
+        <label for="password" class="text-sm font-semibold mb-1 block">Password</label>
+        <input type="password" id="password" placeholder="••••••••" required>
+
+        <label for="role" class="text-sm font-semibold mb-1 block">User Role</label>
+        <select id="role">
+            <option value="Student">Student</option>
+            <option value="Employer">Employer</option>
+        </select>
+
+        <button id="registerBtn" class="btn btn-primary w-full mt-2" style="width: 100%;">Create Account</button>
+
+        <p class="text-sm text-center mt-4">
+            Already have an account? <a href="login.html" style="color: var(--primary-color); font-weight: 500;">Login here</a>
+        </p>
+    </div>
+
+    <script>
+        const btn = document.getElementById('registerBtn');
+        const msg = document.getElementById('msg');
+        const successMsg = document.getElementById('successMsg');
+
+        btn.addEventListener('click', async () => {
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const role = document.getElementById('role').value;
+            
+            if (!email || !password) {
+                msg.innerText = "Please provide all required fields.";
+                return;
+            }
+
+            msg.innerText = "";
+            successMsg.innerText = "";
+            btn.disabled = true;
+            btn.innerText = "Registering...";
+
+            try {
+                const response = await fetch('http://localhost:5178/api/Account/register', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email, password, role })
+                });
+
+                if (response.ok) {
+                    successMsg.innerText = "Registration complete! Redirecting to login...";
+                    setTimeout(() => window.location.href = "login.html", 2000);
+                } else {
+                    const data = await response.json();
+                    msg.innerText = data.errors ? JSON.stringify(data.errors) : (data.message || "Registration encountered an error.");
+                    btn.disabled = false;
+                    btn.innerText = "Create Account";
+                }
+            } catch (err) {
+                msg.innerText = "Communication failure. Please ensure the backend server is active.";
+                btn.disabled = false;
+                btn.innerText = "Create Account";
+            }
+        });
+    </script>
+</body>
+
+</html>

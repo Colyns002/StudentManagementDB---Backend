@@ -1,4 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations;
 
 namespace StudentManagementAPI.DTOs
 {
@@ -11,5 +11,7 @@ namespace StudentManagementAPI.DTOs
         [RegularExpression(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$",
          ErrorMessage = "Password must have uppercase, lowercase, number, and special character.")]
         public string Password { get; set; } = string.Empty;
+
+        public string Role { get; set; } = "Student";
     }
 }

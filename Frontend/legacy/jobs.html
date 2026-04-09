@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Board | Professional Portal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Job Portal Dashboard</h1>
+        <div id="userMenu">
+            <span id="userEmail" class="text-sm" style="margin-right: 1rem; color: var(--text-secondary);"></span>
+            <button class="btn btn-outline" onclick="logout()">Logout</button>
+        </div>
+    </header>
+
+    <div class="container fade-in">
+        <div id="studentDashboard" style="display: none;">
+            <div class="mb-4">
+                <h2 style="text-align: left;">Academic Hub</h2>
+                <div id="academicInfo" class="mt-4">
+                    <p style="color: var(--text-secondary);">Your courses and department details will appear here.</p>
+                </div>
+            </div>
+            
+            <hr style="margin: 2rem 0; border: 0; border-top: 1px solid var(--border-color);">
+            
+            <h2 style="text-align: left;">Available Vacancies</h2>
+            <div id="jobList">Loading jobs...</div>
+        </div>
+
+        <div id="employerDashboard" style="display: none;">
+            <div class="mb-4">
+                <h2 style="text-align: left;">Recruiter Hub</h2>
+                <div id="employerPortal" class="mt-4">
+                    <button class="btn btn-primary" onclick="alert('Feature coming soon!')">Post New Job</button>
+                </div>
+            </div>
+
+            <hr style="margin: 2rem 0; border: 0; border-top: 1px solid var(--border-color);">
+
+            <h2 style="text-align: left;">Applicant Manager</h2>
+            <div id="applicationList">Loading applications...</div>
+        </div>
+    </div>
+
+    <script>
+        const apiBase = 'http://localhost:5178/api';
+
+        function parseJwt(token) {
+            try {
+                const base64Url = token.split('.')[1];
+                const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+                const jsonPayload = decodeURIComponent(atob(base64).split('').map(c => {
+                    return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+                }).join(''));
+                return JSON.parse(jsonPayload);
+            } catch (e) {
+                return null;
+            }
+        }
+
+        async function initDashboard() {
+            const token = localStorage.getItem('token');
+            if (!token) {
+                window.location.href = 'login.html';
+                return;
+            }
+
+            const payload = parseJwt(token);
+            if (!payload) {
+                logout();
+                return;
+            }
+
+            // In our system, the role claim is often "http://schemas.microsoft.com/ws/2008/06/identity/claims/role" 
+            // or just "role" depending on the version.
+            const role = payload["http://schemas.microsoft.com/ws/2008/06/identity/claims/role"] || payload.role;
+            const email = payload["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress"] || payload.email;
+
+            document.getElementById('userEmail').textContent = `${email} (${role})`;
+
+            if (role === 'Student') {
+                document.getElementById('studentDashboard').style.display = 'block';
+                loadAcademicInfo();
+                loadJobs();
+            } else if (role === 'Employer' || role === 'Admin') {
+                document.getElementById('employerDashboard').style.display = 'block';
+                loadApplications();
+            } else {
+                alert("Role not recognized. Access restricted.");
+                logout();
+            }
+        }
+
+        async function loadAcademicInfo() {
+            const token = localStorage.getItem('token');
+            const container = document.getElementById('academicInfo');
+            
+            try {
+                // Fetch Departments
+                const deptRes = await fetch(`${apiBase}/Departments`, {
+                    headers: { 'Authorization': `Bearer ${token}` }
+                });
+                const depts = await deptRes.json();
+
+                // Fetch Courses (Fixed endpoint)
+                const courseRes = await fetch(`${apiBase}/Courses`, {
+                    headers: { 'Authorization': `Bearer ${token}` }
+                });
+                const courses = await courseRes.json();
+
+                container.innerHTML = `
+                    <div class="card" style="padding: 1.5rem;">
+                        <h4 class="mb-4">Departmental Structure</h4>
+                        ${depts.map(d => `<p>• ${d.name} (${d.location})</p>`).join('')}
+                        <h4 class="mt-4 mb-4">Enrollment Opportunities</h4>
+                        ${courses.map(c => `<p>• ${c.title} (${c.credits} Credits)</p>`).join('')}
+                    </div>
+                `;
+            } catch (e) {
+                container.innerHTML = `<p class="text-error">Unable to load academic documents.</p>`;
+            }
+        }
+
+        async function loadJobs() {
+            const token = localStorage.getItem('token');
+            const listContainer = document.getElementById('jobList');
+
+            try {
+                const response = await fetch(`${apiBase}/Jobs`, {
+                    headers: { 'Authorization': `Bearer ${token}` }
+                });
+                const jobs = await response.json();
+                
+                listContainer.innerHTML = jobs.map(job => `
+                    <div class="job-card">
+                        <div class="job-info">
+                            <h3>${job.title}</h3>
+                            <p>${job.description || 'No description.'}</p>
+                        </div>
+                        <button class="btn btn-primary" onclick="apply(${job.id})">Apply Now</button>
+                    </div>
+                `).join('');
+            } catch (err) {
+                listContainer.innerHTML = `<p class="text-error">Failed to load vacancies.</p>`;
+            }
+        }
+
+        async function loadApplications() {
+            const token = localStorage.getItem('token');
+            const listContainer = document.getElementById('applicationList');
+
+            try {
+                // This would normally be Employer-specific applications
+                const response = await fetch(`${apiBase}/Jobs/applications`, {
+                    headers: { 'Authorization': `Bearer ${token}` }
+                });
+                
+                if (!response.ok) throw new Error("Access Denied");
+                
+                const apps = await response.json();
+
+                if (!apps.length) {
+                    listContainer.innerHTML = `<p style="color: var(--text-secondary);">No applications received yet.</p>`;
+                    return;
+                }
+
+                listContainer.innerHTML = apps.map(app => `
+                    <div class="job-card">
+                        <div class="job-info">
+                            <h3>Student ID: ${app.studentId}</h3>
+                            <p>Job Reference: ${app.jobPostId}</p>
+                            <p>Status: <span class="font-bold shadow-sm" style="color: var(--primary-color)">${app.status}</span></p>
+                        </div>
+                        <div style="display: flex; gap: 0.5rem;">
+                            <button class="btn btn-outline" style="color: var(--success-color)" onclick="updateStatus(${app.id}, 'Approved')">Approve</button>
+                            <button class="btn btn-outline" style="color: var(--error-color)" onclick="updateStatus(${app.id}, 'Rejected')">Reject</button>
+                        </div>
+                    </div>
+                `).join('');
+            } catch (err) {
+                listContainer.innerHTML = `<p class="text-error">You do not have permission to view applicants.</p>`;
+            }
+        }
+
+        async function updateStatus(appId, status) {
+            const token = localStorage.getItem('token');
+            try {
+                const response = await fetch(`${apiBase}/Jobs/applications/${appId}/status`, {
+                    method: 'PUT',
+                    headers: { 
+                        'Authorization': `Bearer ${token}`,
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(status)
+                });
+
+                if (response.ok) {
+                    alert(`Application ${status}`);
+                    loadApplications();
+                }
+            } catch (e) {
+                alert("Status update failed.");
+            }
+        }
+
+        function logout() {
+            localStorage.clear();
+            window.location.href = 'login.html';
+        }
+
+        initDashboard();
+    </script>
+</body>
+
+</html>

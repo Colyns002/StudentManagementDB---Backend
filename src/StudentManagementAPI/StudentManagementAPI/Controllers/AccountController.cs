@@ -1,10 +1,9 @@
-﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using StudentManagementAPI.DTOs;
 using StudentManagementAPI.Models;
 using StudentManagementAPI.Services;
-
 
 namespace StudentManagementAPI.Controllers
 {
@@ -16,34 +15,41 @@ namespace StudentManagementAPI.Controllers
         private readonly IEmailSender _emailSender;
         private readonly ITokenService _tokenService;
 
-        // 2. Add ITokenService to the constructor parameters
         public AccountController(
             UserManager<ApplicationUser> userManager,
             IEmailSender emailSender,
-            ITokenService tokenService) // Inject it here
+            ITokenService tokenService)
         {
             _userManager = userManager;
             _emailSender = emailSender;
-            _tokenService = tokenService; // 3. Assign the value
+            _tokenService = tokenService;
         }
 
         [HttpPost("register")]
         public async Task<IActionResult> Register(RegisterDto model)
         {
+            var existingUser = await _userManager.FindByEmailAsync(model.Email);
+            if (existingUser != null)
+            {
+                return Conflict(new { message = "The email already exists. Please login instead." });
+            }
+
             var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
             var result = await _userManager.CreateAsync(user, model.Password);
 
             if (result.Succeeded)
             {
-                // Generate the token
+                var roleToAssign = "Student";
+                if (model.Role == "Employer") roleToAssign = "Employer";
+                if (model.Role == "Admin") roleToAssign = "Admin";
+                await _userManager.AddToRoleAsync(user, roleToAssign);
+
                 var token = await _userManager.GenerateEmailConfirmationTokenAsync(user);
 
-                // Create the confirmation link
                 var confirmationLink = Url.Action("ConfirmEmail", "Account",
                     new { userId = user.Id, token = token }, Request.Scheme);
 
-                // Send the "email" (it will appear in your Visual Studio Console)
-                await _emailSender.SendEmailAsync(user.Email, "Confirm your email",
+                await _emailSender.SendEmailAsync(user.Email!, "Confirm your email",
                     $"Please confirm your account by clicking here: {confirmationLink}");
 
                 return Ok("Registration successful. Check the console for your verification link.");
@@ -59,12 +65,11 @@ namespace StudentManagementAPI.Controllers
             var user = await _userManager.FindByIdAsync(userId);
             if (user == null) return NotFound("User not found.");
 
-            // This internal Identity method validates the token and updates the DB
             var result = await _userManager.ConfirmEmailAsync(user, token);
 
             if (result.Succeeded)
             {
-                user.IsEmailConfirmed = true; // Update your custom flag
+                user.IsEmailConfirmed = true; 
                 await _userManager.UpdateAsync(user);
                 return Ok("Email confirmed successfully! You can now log in.");
             }
@@ -82,15 +87,12 @@ namespace StudentManagementAPI.Controllers
 
             if (user.EmailConfirmed) return BadRequest("Email is already confirmed.");
 
-            // Generate a new token
             var token = await _userManager.GenerateEmailConfirmationTokenAsync(user);
 
-            // Create the confirmation link
             var confirmationLink = Url.Action("ConfirmEmail", "Account",
                 new { userId = user.Id, token = token }, Request.Scheme);
 
-            // Send the "email" to the console
-            await _emailSender.SendEmailAsync(user.Email, "Confirm your email",
+            await _emailSender.SendEmailAsync(user.Email!, "Confirm your email",
                 $"Please confirm your account by clicking here: {confirmationLink}");
 
             return Ok("Confirmation email resent. Please check the console.");
@@ -102,13 +104,13 @@ namespace StudentManagementAPI.Controllers
             var user = await _userManager.FindByEmailAsync(model.Email);
 
             if (user == null || !await _userManager.CheckPasswordAsync(user, model.Password))
-                return Unauthorized("Invalid credentials.");
+                return Unauthorized(new { message = "Credentials do not match our records." });
 
             if (!user.EmailConfirmed)
-                return Unauthorized("Please confirm your email before logging in.");
+                return Unauthorized(new { message = "Please verify your email before signing in." });
 
-            // Generate the JWT token
-            var token = _tokenService.CreateToken(user);
+            var roles = await _userManager.GetRolesAsync(user);
+            var token = _tokenService.CreateToken(user, roles);
 
             return Ok(new
             {

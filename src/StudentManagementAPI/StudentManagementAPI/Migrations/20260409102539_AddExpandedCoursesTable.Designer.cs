@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using StudentManagementAPI.Data;
 
@@ -11,9 +12,11 @@ using StudentManagementAPI.Data;
 namespace StudentManagementAPI.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260409102539_AddExpandedCoursesTable")]
+    partial class AddExpandedCoursesTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -423,24 +426,6 @@ namespace StudentManagementAPI.Migrations
                     b.ToTable("JobPosts");
                 });
 
-            modelBuilder.Entity("StudentManagementAPI.Models.JobPostCourse", b =>
-                {
-                    b.Property<int>("JobPostId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("CourseId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("RecommendationLevel")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("JobPostId", "CourseId");
-
-                    b.HasIndex("CourseId");
-
-                    b.ToTable("JobPostCourses");
-                });
-
             modelBuilder.Entity("StudentManagementAPI.Models.Student", b =>
                 {
                     b.Property<int>("StudentID")
@@ -574,35 +559,9 @@ namespace StudentManagementAPI.Migrations
                     b.Navigation("Employer");
                 });
 
-            modelBuilder.Entity("StudentManagementAPI.Models.JobPostCourse", b =>
-                {
-                    b.HasOne("StudentManagementAPI.Models.Course", "Course")
-                        .WithMany("JobPostCourses")
-                        .HasForeignKey("CourseId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.HasOne("StudentManagementAPI.Models.JobPost", "JobPost")
-                        .WithMany("JobPostCourses")
-                        .HasForeignKey("JobPostId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.Navigation("Course");
-
-                    b.Navigation("JobPost");
-                });
-
-            modelBuilder.Entity("StudentManagementAPI.Models.Course", b =>
-                {
-                    b.Navigation("JobPostCourses");
-                });
-
             modelBuilder.Entity("StudentManagementAPI.Models.JobPost", b =>
                 {
                     b.Navigation("Applications");
-
-                    b.Navigation("JobPostCourses");
                 });
 #pragma warning restore 612, 618
         }

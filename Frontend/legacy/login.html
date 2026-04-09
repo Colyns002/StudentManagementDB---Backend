@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Professional Portal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            padding: 0;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card fade-in" style="width: 100%; max-width: 400px;">
+        <h1 style="font-size: 1.5rem; text-align: center; color: var(--primary-color); margin-bottom: 0.5rem;">Job Portal</h1>
+        <h2 style="font-size: 1.125rem; margin-bottom: 2rem;">Sign in to your account</h2>
+
+        <div id="msg" class="text-error text-sm text-center mb-4"></div>
+
+        <label for="email" class="text-sm font-semibold mb-1 block">Email address</label>
+        <input type="email" id="email" placeholder="name@company.com" required>
+
+        <label for="password" class="text-sm font-semibold mb-1 block">Password</label>
+        <input type="password" id="password" placeholder="••••••••" required>
+
+        <button id="loginBtn" class="btn btn-primary w-full mt-2" style="width: 100%;">Sign in</button>
+
+        <p class="text-sm text-center mt-4">
+            New to the portal? <a href="register.html" style="color: var(--primary-color); font-weight: 500;">Register here</a>
+        </p>
+    </div>
+
+    <script>
+        const btn = document.getElementById('loginBtn');
+        const msg = document.getElementById('msg');
+
+        function parseJwt(token) {
+            try {
+                const base64Url = token.split('.')[1];
+                const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+                const jsonPayload = decodeURIComponent(atob(base64).split('').map(c => {
+                    return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+                }).join(''));
+                return JSON.parse(jsonPayload);
+            } catch (e) {
+                return null;
+            }
+        }
+
+        btn.addEventListener('click', async () => {
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            
+            if (!email || !password) {
+                msg.innerText = "Please provide both email and password.";
+                return;
+            }
+
+            msg.innerText = "";
+            btn.disabled = true;
+            btn.innerText = "Authenticating...";
+
+            try {
+                const response = await fetch('http://localhost:5178/api/Account/login', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email, password })
+                });
+
+                let data = {};
+                try {
+                    data = await response.json();
+                } catch (e) {
+                    // Fallback if response is not JSON
+                }
+
+                if (response.ok) {
+                    localStorage.setItem('token', data.token);
+                    localStorage.setItem('email', data.email);
+                    
+                    // Decode role for redirection
+                    const payload = parseJwt(data.token);
+                    const role = payload["http://schemas.microsoft.com/ws/2008/06/identity/claims/role"] || payload.role;
+
+                    if (role === "Admin") {
+                        window.location.href = "admin.html";
+                    } else {
+                        window.location.href = "jobs.html";
+                    }
+                } else {
+                    // Display the ACTUAL message from the server if available
+                    msg.innerText = data.message || "An unexpected error occurred. Please try again.";
+                    btn.disabled = false;
+                    btn.innerText = "Sign in";
+                }
+            } catch (err) {
+                console.error("Login Fetch Error:", err);
+                msg.innerText = "Connection failed. Please ensure the backend is running.";
+                btn.disabled = false;
+                btn.innerText = "Sign in";
+            }
+        });
+    </script>
+</body>
+
+</html>

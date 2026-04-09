@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using StudentManagementAPI.Data;
 
@@ -11,9 +12,11 @@ using StudentManagementAPI.Data;
 namespace StudentManagementAPI.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260401152328_AddDocsToJobApplication")]
+    partial class AddDocsToJobApplication
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -231,51 +234,17 @@ namespace StudentManagementAPI.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CourseID"));
 
-                    b.Property<DateTime>("CreatedDate")
-                        .HasColumnType("datetime2");
-
                     b.Property<int>("Credits")
                         .HasColumnType("int");
 
                     b.Property<int>("DeptID")
                         .HasColumnType("int");
 
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasMaxLength(2000)
-                        .HasColumnType("nvarchar(2000)");
-
-                    b.Property<string>("Duration")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
-                    b.Property<string>("InstructorId")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<bool>("IsActive")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("Level")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.Property<decimal>("Price")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<string>("Syllabus")
-                        .HasMaxLength(5000)
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Title")
                         .IsRequired()
-                        .HasMaxLength(200)
-                        .HasColumnType("nvarchar(200)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("CourseID");
-
-                    b.HasIndex("InstructorId");
 
                     b.ToTable("Courses");
 
@@ -283,14 +252,8 @@ namespace StudentManagementAPI.Migrations
                         new
                         {
                             CourseID = 1,
-                            CreatedDate = new DateTime(2026, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             Credits = 4,
                             DeptID = 1,
-                            Description = "Learn to build robust REST APIs with ASP.NET Core, Entity Framework, and SQL Server.",
-                            Duration = "8 Weeks",
-                            IsActive = true,
-                            Level = "Intermediate",
-                            Price = 0m,
                             Title = "Backend Development"
                         });
                 });
@@ -423,24 +386,6 @@ namespace StudentManagementAPI.Migrations
                     b.ToTable("JobPosts");
                 });
 
-            modelBuilder.Entity("StudentManagementAPI.Models.JobPostCourse", b =>
-                {
-                    b.Property<int>("JobPostId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("CourseId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("RecommendationLevel")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("JobPostId", "CourseId");
-
-                    b.HasIndex("CourseId");
-
-                    b.ToTable("JobPostCourses");
-                });
-
             modelBuilder.Entity("StudentManagementAPI.Models.Student", b =>
                 {
                     b.Property<int>("StudentID")
@@ -534,16 +479,6 @@ namespace StudentManagementAPI.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("StudentManagementAPI.Models.Course", b =>
-                {
-                    b.HasOne("StudentManagementAPI.Models.ApplicationUser", "Instructor")
-                        .WithMany()
-                        .HasForeignKey("InstructorId")
-                        .OnDelete(DeleteBehavior.Restrict);
-
-                    b.Navigation("Instructor");
-                });
-
             modelBuilder.Entity("StudentManagementAPI.Models.JobApplication", b =>
                 {
                     b.HasOne("StudentManagementAPI.Models.JobPost", "Job")
@@ -574,35 +509,9 @@ namespace StudentManagementAPI.Migrations
                     b.Navigation("Employer");
                 });
 
-            modelBuilder.Entity("StudentManagementAPI.Models.JobPostCourse", b =>
-                {
-                    b.HasOne("StudentManagementAPI.Models.Course", "Course")
-                        .WithMany("JobPostCourses")
-                        .HasForeignKey("CourseId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.HasOne("StudentManagementAPI.Models.JobPost", "JobPost")
-                        .WithMany("JobPostCourses")
-                        .HasForeignKey("JobPostId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.Navigation("Course");
-
-                    b.Navigation("JobPost");
-                });
-
-            modelBuilder.Entity("StudentManagementAPI.Models.Course", b =>
-                {
-                    b.Navigation("JobPostCourses");
-                });
-
             modelBuilder.Entity("StudentManagementAPI.Models.JobPost", b =>
                 {
                     b.Navigation("Applications");
-
-                    b.Navigation("JobPostCourses");
                 });
 #pragma warning restore 612, 618
         }
